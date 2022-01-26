@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity">
+    <LinearLayout
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accelerometer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"/>
+        <TextView
+            android:id="@+id/aX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/aY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/aZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gyroscope"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"/>
+        <TextView
+            android:id="@+id/gX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/gY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/gZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proximity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/pX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/pY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/pZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gravity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/grX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/grY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/grZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gravity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/txtCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtFull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnLol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="close"
+            android:text="lol"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+    <com.itsxtt.patternlock.PatternLockView
+        android:id="@+id/patternLockView"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:plv_lineWidth="@dimen/_4sdp"
+        app:plv_regularDotColor="@color/black"
+        app:plv_regularLineColor="#00ffffff"
+        app:plv_selectedDotColor="@color/yellow"
+        app:wrongStateColor="@color/red" />
+
+    <com.jaygoo.widget.RangeSeekBar
+        android:id="@+id/rangeSeekBar"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/patternLockView"
+        android:layout_marginBottom="-1dp"
+        app:rsb_gravity="bottom"
+        app:rsb_indicator_background_color="@color/yellow"
+        app:rsb_indicator_height="wrap_content"
+        app:rsb_indicator_padding_bottom="10dp"
+        app:rsb_indicator_padding_top="10dp"
+        app:rsb_indicator_radius="5dp"
+        app:rsb_indicator_show_mode="alwaysShow"
+        app:rsb_indicator_text_color="@color/black_app"
+        app:rsb_indicator_text_size="12sp"
+        app:rsb_indicator_width="30dp"
+        app:rsb_mode="single"
+        app:rsb_progress_color="@color/yellow"
+        app:rsb_progress_default_color="@color/rsbColorSeekBarDefault"
+        app:rsb_thumb_drawable="@drawable/thumb_seekbar"
+        app:rsb_thumb_height="25dp"
+        app:rsb_thumb_width="25dp"
+        app:rsb_tick_mark_mode="number"
+        app:rsb_max="100"
+        app:rsb_min="0"/>
+
+</RelativeLayout>

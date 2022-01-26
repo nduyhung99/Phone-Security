@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatternActivity"
+    android:orientation="vertical">
+    <com.example.phonesecurity.AutoFitTextureView
+        android:id="@+id/textureView"
+        android:layout_width="@dimen/_480sdp"
+        android:layout_height="@dimen/_480sdp"
+        android:layout_margin="10dp"
+        android:visibility="visible"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <View
+            android:id="@+id/lol"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_60sdp"/>
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_below="@+id/lol"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/logo"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgLogo"
+            android:layout_marginTop="@dimen/_46sdp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="Vẽ mật khẩu"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp" />
+
+        <LinearLayout
+            android:id="@+id/layoutImagePin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtStatus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/dot_2" />
+
+                <ImageView
+                    android:id="@+id/imgPin1"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/dot_1"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/dot_2" />
+
+                <ImageView
+                    android:id="@+id/imgPin2"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/dot_1"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/dot_2" />
+
+                <ImageView
+                    android:id="@+id/imgPin3"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/dot_1"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/dot_2" />
+
+                <ImageView
+                    android:id="@+id/imgPin4"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/dot_1"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layoutLook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <com.itsxtt.patternlock.PatternLockView
+            android:id="@+id/patternLockView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_260sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:visibility="visible"
+            app:plv_lineWidth="@dimen/_4sdp"
+            app:plv_regularDotColor="@color/black"
+            app:plv_regularLineColor="@color/yellow"
+            app:plv_selectedDotColor="@color/yellow"
+            app:wrongStateColor="@color/red" />
+        <com.itsxtt.patternlock.PatternLockView
+            android:id="@+id/patternLockViewHideLine"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_260sdp"
+            android:layout_margin="@dimen/_16sdp"
+            app:plv_regularDotColor="@color/black"
+            app:plv_lineWidth="@dimen/_4sdp"
+            app:plv_regularLineColor="@color/transparent"
+            app:wrongStateColor="@color/red"
+            app:plv_selectedDotColor="@color/yellow"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/layoutPin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_240sdp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/layoutEdtPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edtPin1"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:autofillHints="none"
+                    android:background="@drawable/shape_pin"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="@dimen/_4sdp"
+                    android:text=""
+                    android:textSize="@dimen/_18sdp" />
+
+                <EditText
+                    android:id="@+id/edtPin2"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:autofillHints="none"
+                    android:background="@drawable/shape_pin"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="@dimen/_4sdp"
+                    android:text=""
+                    android:textSize="@dimen/_18sdp" />
+
+                <EditText
+                    android:id="@+id/edtPin3"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:autofillHints="none"
+                    android:background="@drawable/shape_pin"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="@dimen/_4sdp"
+                    android:text=""
+                    android:textSize="@dimen/_18sdp" />
+
+                <EditText
+                    android:id="@+id/edtPin4"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:autofillHints="none"
+                    android:background="@drawable/shape_pin"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="@dimen/_4sdp"
+                    android:text=""
+                    android:textSize="@dimen/_18sdp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_240sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_app"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp">
+
+                <TextView
+                    android:id="@+id/one"
+                    style="@style/NumberInPasscode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:onClick="clickOne"
+                    android:text="1"
+                    tools:ignore="OnClick" />
+
+                <TextView
+                    android:id="@+id/two"
+                    style="@style/NumberInPasscode"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="clickTwo"
+                    android:text="2"
+                    tools:ignore="OnClick" />
+
+                <TextView
+                    android:id="@+id/three"
+                    style="@style/NumberInPasscode"
+                    android:layout_alignParentRight="true"
+                    android:onClick="clickThree"
+                    android:text="3"
+                    tools:ignore="OnClick" />
+
+                <TextView
+                    android:id="@+id/four"
+                    style="@style/NumberInPasscode"
+                    android:layout_below="@id/one"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:onClick="clickFour"
+                    android:text="4"
+                    tools:ignore="OnClick" />
+
+                <TextView
+                    android:id="@+id/five"
+                    style="@style/NumberInPasscode"
+                    android:layout_below="@id/one"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="clickFive"
+                    android:text="5"
+                    tools:ignore="OnClick" />
+
+                <TextView
+                    android:id="@+id/six"
+                    style="@style/NumberInPasscode"
+                    android:layout_below="@id/one"
+                    android:layout_alignParentRight="true"
+                    android:onClick="clickSix"
+                    android:text="6"
+                    tools:ignore="OnClick" />
+
+                <TextView
+                    android:id="@+id/seven"
+                    style="@style/NumberInPasscode"
+                    android:layout_below="@id/four"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:onClick="clickSeven"
+                    android:text="7"
+                    tools:ignore="OnClick" />
+
+                <TextView
+                    android:id="@+id/eight"
+                    style="@style/NumberInPasscode"
+                    android:layout_below="@id/four"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="clickEight"
+                    android:text="8"
+                    tools:ignore="OnClick" />
+
+                <TextView
+                    android:id="@+id/nine"
+                    style="@style/NumberInPasscode"
+                    android:layout_below="@id/four"
+                    android:layout_alignParentRight="true"
+                    android:onClick="clickNine"
+                    android:text="9"
+                    tools:ignore="OnClick" />
+
+                <ImageView
+                    android:id="@+id/btnBackSpace"
+                    style="@style/NumberInPasscode"
+                    android:layout_below="@id/seven"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/black_app"
+                    android:onClick="clickBackspace"
+                    android:padding="@dimen/_8sdp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/backspace"
+                    app:tint="@color/white"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/zero"
+                    style="@style/NumberInPasscode"
+                    android:layout_below="@id/seven"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="clickZero"
+                    android:text="0"
+                    tools:ignore="OnClick" />
+
+                <ImageView
+                    android:id="@+id/btnCheckPin"
+                    style="@style/NumberInPasscode"
+                    android:layout_below="@id/seven"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/black_app"
+                    android:onClick="clickCheck"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_check_bold_24dp"
+                    app:tint="@color/white"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
