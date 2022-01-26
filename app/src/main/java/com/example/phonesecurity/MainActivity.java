@@ -919,17 +919,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.radTime1:
                 return 3000;
             case R.id.radTime2:
-                return 10000;
+                return 5000;
             case R.id.radTime3:
-                return 15000;
+                return 10000;
             case R.id.radTime4:
-                return 20000;
+                return 15000;
             case R.id.radTime5:
-                return 25000;
+                return 20000;
             case R.id.radTime6:
+                return 25000;
+            case R.id.radTime7:
                 return 30000;
         }
-        return 5000;
+        return 3000;
     }
 
     private void startListenerService(int i) {

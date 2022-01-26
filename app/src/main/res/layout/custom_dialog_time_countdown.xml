@@ -66,6 +66,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/timer6"/>
+            <RadioButton
+                android:id="@+id/radTime7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timer7"/>
         </RadioGroup>
         <TextView
             android:id="@+id/txtApply"
